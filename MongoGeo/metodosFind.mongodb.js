@@ -4,7 +4,7 @@ db.municipios.find().count() //5570
 //Listar todos os municipios terminados em tu ordenados pelo estado e nome
 use('geo') //$ que termine - i = insensitive case
 db.municipios.find({nome: /tu$/i},{nome:1, codigo_uf:1, _id:0})
-             .sort({codigo_uf:-1, nome:1}) //1 -> Ordem Ascendente, -1->Descend
+             .sort({codigo_uf:-1, nome:1}) //1 -> Ordem Ascendente, -1 ->Descend
 
 use('geo')
 db.municipios.find().sort({nome:-1}) 
