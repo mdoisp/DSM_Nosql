@@ -364,17 +364,17 @@ db.tributacao.insertMany([
     {
         id: 2,
         tiposTributacao: "Simples Nacional",
-        descricao: ""
+        descricao: "Reúne em um único documento, chamado de DAS (Documento de Arrecadação do Simples Nacional), as 8 taxas que devem ser pagas; - Possui alíquotas menores que os demais regimes; - É menos burocrático; - Para se enquadrar no Simples, é preciso ser microempreendedor individual (MEI), microempresa (ME) ou empresa de pequeno porte (EPP) e cumprir os seguintes requisitos financeiros: 1 - O MEI não pode ter faturamento anual acima de R$ 81 mil; 2 - Para ME, o teto é de R$ 360 mil por ano; 3 - O limite anual para a EPP é R$ 4,8 milhões."
     },
     {
-        id: 2,
+        id: 3,
         tiposTributacao: "Lucro Real",
-        descricao: ""
+        descricao: "O enquadramento ao Lucro Real é obrigatório nos casos de bancos e corretoras de título e, ainda, caso a empresa tenha tido uma receita bruta superior a R$ 78 milhões no ano anterior. Diferentemente do Simples Nacional, os tributos são cobrados individualmente, o que requer um maior cuidado das empresas para que algum não fique em aberto. Como o cálculo de cada taxa é baseado no lucro, esse regime é indicado para empresas que não tenham uma margem de lucro muito elevada, atuem no prejuízo ou, então, tenham custos elevados em serviços ou produtos."
     },
     {
-        id: 2,
+        id: 4,
         tiposTributacao: "Lucro Presumido",
-        descricao: ""
+        descricao: "Neste tipo de tributação, a incidência de impostos é baseada na estimativa de lucro da empresa e calculada conforme a atividade que é desempenhada. No caso, os impostos podem variar de 8% (indústria e comércio) a 32% (serviço). Qualquer negócio que não é obrigado a aderir ao Lucro Real pode optar por esse regime, porém ele é mais vantajoso para as empresas que: - Apresentarem margem de lucro superior ao da presunção; - Tenham baixos custos operacionais; - Possuam folha de pagamento enxuta; - Não ultrapassem o faturamento de R$ 78 milhões. Existe, porém, uma desvantagem que deve ser levada em consideração. Caso a empresa lucre menos do que a média das demais empresas que exercem a mesma atividade, ela deverá pagar um imposto em cima da alíquota pré-fixada (8%)."
     }
 ])
 
