@@ -127,7 +127,7 @@ use('exercicioFixacao')
 db.funcionarios.find({projetos: {$size: {$gt: 1}}})
 //17
 use('exercicioFixacao')
-db.funcionarios.find({dataCadastro: {$gte: new Date(new Date().getTime()-30*34*60*60*1000)}})
+db.funcionarios.find({dataCadastro: {$gte: new Date(new Date().getTime()-30*24*60*60*1000)}})
 //18
 use('exercicioFixacao')
 db.funcionarios.find({nome: /^João/})
