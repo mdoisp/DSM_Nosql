@@ -23,13 +23,13 @@ db.notaFiscal.insertMany([
         id:1,
         tiposNota:"NF-e (Nota Fiscal Eletrônica de Produtos ou Mercadorias)",
         descricao:"Esse documento substitui o modelo tradicional. É a versão digital, emitida e armazenada eletronicamente. Limita-se a registrar a venda de produtos físicos, com cobrança de ICMS (Imposto sobre Circulação de Mercadoria Serviços) e IPI (Imposto sobre Produtos Industrializados) e deve ser expedida junto às Secretarias Estaduais da Fazenda. Utilizada sempre em casos de circulação de mercadorias, geralmente, este tipo de nota fiscal é utilizado entre pessoas jurídicas. Ao emitir a NF-e para o comprador, para atestar a operação, a empresa deve enviar um Documento Auxiliar da Nota Fiscal (DANFE) com o produto.",
-        tipoEmpresa:[1]
+        tipoEmpresa:[1, 2, 3]
     },
     {
         id:2,
         tiposNota:"NFS-e (Nota Fiscal Eletrônica de Serviços)",
         descricao:"Esse documento substitui o modelo tradicional. É a versão digital, emitida e armazenada eletronicamente. Limita-se a registrar a venda de produtos físicos, com cobrança de ICMS (Imposto sobre Circulação de Mercadoria Serviços) e IPI (Imposto sobre Produtos Industrializados) e deve ser expedida junto às Secretarias Estaduais da Fazenda. Utilizada sempre em casos de circulação de mercadorias, geralmente, este tipo de nota fiscal é utilizado entre pessoas jurídicas. Ao emitir a NF-e para o comprador, para atestar a operação, a empresa deve enviar um Documento Auxiliar da Nota Fiscal (DANFE) com o produto.",
-        tipoEmpresa:[2]
+        tipoEmpresa:[1, 2, 3]
     }
 ])
 
@@ -73,26 +73,38 @@ db.ramoEmpresa.insertMany([
     {
         id:7,
         secao:"G",
-        tipoEmpresa:[3],
+        tipoEmpresa:[1, 2],
         nomeRamoEmpresa:"COMÉRCIO E REPARAÇÃO DE VEÍCULOS AUTOMOTORES E MOTOCICLETAS"
     },
     {
         id:8,
         secao:"G",
-        tipoEmpresa:[3],
+        tipoEmpresa:[1],
         nomeRamoEmpresa:"COMÉRCIO POR ATACADO, EXCETO VEÍCULOS AUTOMOTORES E MOTOCICLETAS"
     },
     {
         id:9,
         secao:"H",
-        tipoEmpresa:[3],
+        tipoEmpresa:[2],
         nomeRamoEmpresa:"TRANSPORTE TERRESTRE"
     },
     {
         id:10,
         secao:"H",
-        tipoEmpresa:[3],
+        tipoEmpresa:[2],
         nomeRamoEmpresa:"TRANSPORTE AQUAVIÁRIO"
+    },
+    {
+        id: 12,
+        secao: "Q",
+        tipoEmpresa: [2],
+        nomeRamoEmpresa: "ATIVIDADES DE ATENÇÃO À SAÚDE HUMANA"
+    },
+    {
+        id: 11,
+        secao: "N",
+        tipoEmpresa: [2],
+        nomeRamoEmpresa: "SERVIÇOS DE ESCRITÓRIO, DE APOIO ADMINISTRATIVO E OUTROS SERVIÇOS PRESTADOS PRINCIPALMENTE ÀS EMPRESAS"
     }
 ])
 
@@ -101,116 +113,128 @@ db.cnae.insertMany([
         id: 1,
         numeroCnae: "0113-0/00",
         descricao: "Cultivo de cana-de-açúcar",
-        ramoEmpresa: [2],
+        ramoEmpresa: [1],
     },
     {
         id: 2,
         numeroCnae: "0131-8/00",
         descricao: "Cultivo de laranja",
-        ramoEmpresa: [2],
+        ramoEmpresa: [1],
     },
     {
         id: 3,
         numeroCnae: "0210-1/01",
         descricao: "Cultivo de eucalipto",
-        ramoEmpresa: [3],
+        ramoEmpresa: [2],
     },
     {
         id: 4,
         numeroCnae: "0220-9/04",
         descricao: "Coleta de látex em florestas nativas",
-        ramoEmpresa: [3],
+        ramoEmpresa: [2],
     },
     {
         id: 5,
         numeroCnae: "0500-3/01",
         descricao: "Extração de carvão mineral",
-        ramoEmpresa: [4],
+        ramoEmpresa: [3],
     },
     {
         id: 6,
         numeroCnae: "0710-3/01",
         descricao: "Extração de minério de ferro",
-        ramoEmpresa: [5],
+        ramoEmpresa: [4],
     },
     {
         id: 7,
         numeroCnae: "0721-9/01",
         descricao: "Extração de minério de alumínio",
-        ramoEmpresa: [5],
+        ramoEmpresa: [4],
     },
     {
         id: 8,
         numeroCnae: "3600-6/01",
         descricao: "Captação, tratamento e distribuição de água",
-        ramoEmpresa: [6],
+        ramoEmpresa: [5],
     },
     {
         id: 9,
         numeroCnae: "3600-6/02",
         descricao: "Distribuição de água por caminhões",
-        ramoEmpresa: [6],
+        ramoEmpresa: [5],
     },
     {
         id: 10,
         numeroCnae: "3811-4/00",
         descricao: "Coleta de resíduos não perigosos",
-        ramoEmpresa: [7],
+        ramoEmpresa: [6],
     },
     {
         id: 11,
         numeroCnae: "3900-5/00",
         descricao: "Descontaminação e outros serviços de gestão de resíduos",
-        ramoEmpresa: [7],
+        ramoEmpresa: [6],
     },
     {
         id: 12,
         numeroCnae: "4511-1/01",
         descricao: "Comércio a varejo de automóveis, camionetas e utilitários novos",
-        ramoEmpresa: [8],
+        ramoEmpresa: [7],
     },
     {
         id: 13,
         numeroCnae: "4512-9/01",
         descricao: "Representantes comerciais e agentes do comércio de veículos automotores",
-        ramoEmpresa: [8],
+        ramoEmpresa: [7],
     },
     {
         id: 14,
         numeroCnae: "4611-7/00",
         descricao: "Representantes comerciais e agentes do comércio de matérias-primas agrícolas e animais vivos",
-        ramoEmpresa: [9],
+        ramoEmpresa: [8],
     },
     {
         id: 15,
         numeroCnae: "4621-4/00",
         descricao: "Comércio atacadista de café em grão",
-        ramoEmpresa: [9],
+        ramoEmpresa: [8],
     },
     {
         id: 16,
         numeroCnae: "4912-4/01",
         descricao: "Transporte ferroviário de passageiros intermunicipal e interestadual",
-        ramoEmpresa: [10],
+        ramoEmpresa: [9],
     },
     {
         id: 17,
         numeroCnae: "4923-0/01",
         descricao: "Serviço de táxi",
-        ramoEmpresa: [10],
+        ramoEmpresa: [9],
     },
     {
         id: 18,
         numeroCnae: "5011-4/02",
         descricao: "Transporte marítimo de cabotagem - Passageiros",
-        ramoEmpresa: [11],
+        ramoEmpresa: [10],
     },
     {
         id: 19,
         numeroCnae: "5011-4/01",
         descricao: "Transporte marítimo de cabotagem - Carga",
-        ramoEmpresa: [11],
-    }    
+        ramoEmpresa: [10],
+    },
+    {
+        id: 20,
+        numeroCnae: "8211-3/00",
+        descricao: "Serviços combinados de escritório e apoio administrativo.",
+        ramoEmpresa: [11]
+    },
+    {
+        id: 21,
+        numeroCnae: "8630-5/01",
+        descricao: "Atividade médica ambulatorial com recursos para realização de procedimentos cirúrgicos",
+        ramoEmpresa: [12]
+    }  
 ])
 
 db.usuario.insertMany([
@@ -346,37 +370,43 @@ db.tributacao.insertMany([
         id: 1,
         tiposTributacao: "MEI",
         descricao: "O regime do MEI foi criado em 2008 para reduzir os níveis de informalidade, proporcionando aos empreendedores meios mais acessíveis de regularização fiscal. Para tanto, o MEI se apresenta de forma menos burocrática, tendo regras diferenciadas para o pagamento de impostos — IRPJ e CLSS, por exemplo, não entram no cálculo tributário dos microempreendedores individuais. Ainda sobre o pagamento de impostos, os valores de contribuição também são diferenciados no MEI: os cadastrados pagam mensalmente um valor de até R$ 60,60 — de acordo com a atividade exercida. Para que possam se enquadrar neste regime tributário, os empresários devem ter um faturamento bruto anual de até R$ 81 mil e não possuir sócios. Atendendo a esses requisitos, eles podem contar com uma série de benefícios, inclusive previdenciários, como: aposentadoria por idade, licença-maternidade, auxílio-doença, entre outros.",
-        cnae: []
+        cnae: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
     },
     {
         id: 2,
         tiposTributacao: "Simples Nacional",
         descricao: "Reúne em um único documento, chamado de DAS (Documento de Arrecadação do Simples Nacional), as 8 taxas que devem ser pagas; - Possui alíquotas menores que os demais regimes; - É menos burocrático; - Para se enquadrar no Simples, é preciso ser microempreendedor individual (MEI), microempresa (ME) ou empresa de pequeno porte (EPP) e cumprir os seguintes requisitos financeiros: 1 - O MEI não pode ter faturamento anual acima de R$ 81 mil; 2 - Para ME, o teto é de R$ 360 mil por ano; 3 - O limite anual para a EPP é R$ 4,8 milhões.",
-        cnae: []
+        cnae: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
     },
     {
         id: 3,
         tiposTributacao: "Lucro Real",
         descricao: "O enquadramento ao Lucro Real é obrigatório nos casos de bancos e corretoras de título e, ainda, caso a empresa tenha tido uma receita bruta superior a R$ 78 milhões no ano anterior. Diferentemente do Simples Nacional, os tributos são cobrados individualmente, o que requer um maior cuidado das empresas para que algum não fique em aberto. Como o cálculo de cada taxa é baseado no lucro, esse regime é indicado para empresas que não tenham uma margem de lucro muito elevada, atuem no prejuízo ou, então, tenham custos elevados em serviços ou produtos.",
-        cnae: []
+        cnae: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
     },
     {
         id: 4,
         tiposTributacao: "Lucro Presumido",
         descricao: "Neste tipo de tributação, a incidência de impostos é baseada na estimativa de lucro da empresa e calculada conforme a atividade que é desempenhada. No caso, os impostos podem variar de 8% (indústria e comércio) a 32% (serviço). Qualquer negócio que não é obrigado a aderir ao Lucro Real pode optar por esse regime, porém ele é mais vantajoso para as empresas que: - Apresentarem margem de lucro superior ao da presunção; - Tenham baixos custos operacionais; - Possuam folha de pagamento enxuta; - Não ultrapassem o faturamento de R$ 78 milhões. Existe, porém, uma desvantagem que deve ser levada em consideração. Caso a empresa lucre menos do que a média das demais empresas que exercem a mesma atividade, ela deverá pagar um imposto em cima da alíquota pré-fixada (8%).",
-        cnae: []
+        cnae: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
     }
 ])
 
-/*db.abrirEmpresa.insertMany([
+db.abrirEmpresa.insertMany([
     {
         id: 1,
-        formasAbirEmpresa: "",
+        formasAbirEmpresa: "JUCESP",
         descricao: "",
-        tributacao: []
+        cnae: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     },
+    {
+        id: 2,
+        formasAbirEmpresa: "Cartório",
+        descricao: "",
+        cnae: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    }
 ])
-*/
+
 db.escolherContabilidade.insertMany([
     {
         id: 1,
@@ -399,17 +429,19 @@ db.escolherContabilidade.insertMany([
 ])
 
 use('strayCode')
-db.tributacao.find(
-    {id: 4},
-    {tiposTributacao:1, descricao:1, _id:0, id:1})
-
-use('strayCode')
-db.questionario.find()
+db.cnae.find(
+    {descricao: /cultivo/i},
+    {numeroCnae:1, tiposTributacao:1, descricao:1, _id:0})
 
 const dataComeco = new Date("2024-01-01")
-const dataFinal = new Date("2024-06-01")
+const dataFinal = new Date("2024-06-30")
 use('strayCode')
 db.questionario.find(
     {dtQuestionario: {$gte: dataComeco, $lte: dataFinal}},
-    {dtQuestionario:1, _id:0, cnae: {descricao:1}})
+    {dtQuestionario:1, _id:0, cnae: {id:1, descricao:1}})
 
+use('strayCode')
+db.escolherContabilidade.find()
+    
+use('strayCode')
+db.dropDatabase();
