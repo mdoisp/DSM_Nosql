@@ -3,33 +3,33 @@ use('strayCode')
 db.tipoEmpresa.insertMany([
     {
         id:1,
-        tipoEmpresa:"Comércio",
-        descrição:"Empresas que compram e vendem produtos. Isso pode incluir varejistas, atacadistas e empresas de comércio eletrônico."
+        nomeTipoEmpresa: "Comércio",
+        descrição: "Empresas que compram e vendem produtos. Isso pode incluir varejistas, atacadistas e empresas de comércio eletrônico."
     },
     {
         id:2,
-        tipoEmpresa:"Serviços",
-        descrição:"Empresas que oferecem serviços em vez de produtos tangíveis. Isso pode incluir empresas de consultoria, de tecnologia da informação, de saúde, de educação, de transporte, entre outras."
+        nomeTipoEmpresa: "Serviços",
+        descrição: "Empresas que oferecem serviços em vez de produtos tangíveis. Isso pode incluir empresas de consultoria, de tecnologia da informação, de saúde, de educação, de transporte, entre outras."
     },
     {
         id:3,
-        tipoEmpresa:"Indústria",
-        descrição:"Empresas que fabricam produtos físicos. Isso pode incluir indústrias de manufatura, de construção, de energia, entre outras."
+        nomeTipoEmpresa: "Indústria",
+        descrição: "Empresas que fabricam produtos físicos. Isso pode incluir indústrias de manufatura, de construção, de energia, entre outras."
     }
 ])
 
 db.notaFiscal.insertMany([
     {
         id:1,
-        tiposNota:"NF-e (Nota Fiscal Eletrônica de Produtos ou Mercadorias)",
-        descricao:"Esse documento substitui o modelo tradicional. É a versão digital, emitida e armazenada eletronicamente. Limita-se a registrar a venda de produtos físicos, com cobrança de ICMS (Imposto sobre Circulação de Mercadoria Serviços) e IPI (Imposto sobre Produtos Industrializados) e deve ser expedida junto às Secretarias Estaduais da Fazenda. Utilizada sempre em casos de circulação de mercadorias, geralmente, este tipo de nota fiscal é utilizado entre pessoas jurídicas. Ao emitir a NF-e para o comprador, para atestar a operação, a empresa deve enviar um Documento Auxiliar da Nota Fiscal (DANFE) com o produto.",
-        tipoEmpresa:[1, 2, 3]
+        tiposNota: "NF-e (Nota Fiscal Eletrônica de Produtos ou Mercadorias)",
+        descricao: "Esse documento substitui o modelo tradicional. É a versão digital, emitida e armazenada eletronicamente. Limita-se a registrar a venda de produtos físicos, com cobrança de ICMS (Imposto sobre Circulação de Mercadoria Serviços) e IPI (Imposto sobre Produtos Industrializados) e deve ser expedida junto às Secretarias Estaduais da Fazenda. Utilizada sempre em casos de circulação de mercadorias, geralmente, este tipo de nota fiscal é utilizado entre pessoas jurídicas. Ao emitir a NF-e para o comprador, para atestar a operação, a empresa deve enviar um Documento Auxiliar da Nota Fiscal (DANFE) com o produto.",
+        tipoEmpresa: [1, 3]
     },
     {
         id:2,
-        tiposNota:"NFS-e (Nota Fiscal Eletrônica de Serviços)",
-        descricao:"Esse documento substitui o modelo tradicional. É a versão digital, emitida e armazenada eletronicamente. Limita-se a registrar a venda de produtos físicos, com cobrança de ICMS (Imposto sobre Circulação de Mercadoria Serviços) e IPI (Imposto sobre Produtos Industrializados) e deve ser expedida junto às Secretarias Estaduais da Fazenda. Utilizada sempre em casos de circulação de mercadorias, geralmente, este tipo de nota fiscal é utilizado entre pessoas jurídicas. Ao emitir a NF-e para o comprador, para atestar a operação, a empresa deve enviar um Documento Auxiliar da Nota Fiscal (DANFE) com o produto.",
-        tipoEmpresa:[1, 2, 3]
+        tiposNota: "NFS-e (Nota Fiscal Eletrônica de Serviços)",
+        descricao: "Esse documento substitui o modelo tradicional. É a versão digital, emitida e armazenada eletronicamente. Limita-se a registrar a venda de produtos físicos, com cobrança de ICMS (Imposto sobre Circulação de Mercadoria Serviços) e IPI (Imposto sobre Produtos Industrializados) e deve ser expedida junto às Secretarias Estaduais da Fazenda. Utilizada sempre em casos de circulação de mercadorias, geralmente, este tipo de nota fiscal é utilizado entre pessoas jurídicas. Ao emitir a NF-e para o comprador, para atestar a operação, a empresa deve enviar um Documento Auxiliar da Nota Fiscal (DANFE) com o produto.",
+        tipoEmpresa: 2
     }
 ])
 
@@ -37,74 +37,74 @@ db.ramoEmpresa.insertMany([
     {
         id:1,
         secao:"A",
-        tipoEmpresa:[3],
+        tipoEmpresa: 3,
         nomeRamoEmpresa:"AGRICULTURA, PECUÁRIA E SERVIÇOS RELACIONADOS"
     },
     {
         id:2,
         secao:"A",
-        tipoEmpresa:[3],
+        tipoEmpresa: 3,
         nomeRamoEmpresa:"PRODUÇÃO FLORESTAL"
     },
     {
         id:3,
         secao:"B",
-        tipoEmpresa:[3],
+        tipoEmpresa: 3,
         nomeRamoEmpresa:"EXTRAÇÃO DE CARVÃO MINERAL"
     },
     {
         id:4,
         secao:"B",
-        tipoEmpresa:[3],
+        tipoEmpresa: 3,
         nomeRamoEmpresa:"EXTRAÇÃO DE MINERAIS METÁLICOS"
     },
     {
         id:5,
         secao:"E",
-        tipoEmpresa:[3],
+        tipoEmpresa: 3,
         nomeRamoEmpresa:"CAPTAÇÃO, TRATAMENTO E DISTRIBUIÇÃO DE ÁGUA"
     },
     {
         id:6,
         secao:"E",
-        tipoEmpresa:[3],
+        tipoEmpresa: 3,
         nomeRamoEmpresa:"COLETA, TRATAMENTO E DISPOSIÇÃO DE RESÍDUOS; RECUPERAÇÃO DE MATERIAIS"
     },
     {
         id:7,
         secao:"G",
-        tipoEmpresa:[1, 2],
+        tipoEmpresa: 1,
         nomeRamoEmpresa:"COMÉRCIO E REPARAÇÃO DE VEÍCULOS AUTOMOTORES E MOTOCICLETAS"
     },
     {
         id:8,
         secao:"G",
-        tipoEmpresa:[1],
+        tipoEmpresa: 1,
         nomeRamoEmpresa:"COMÉRCIO POR ATACADO, EXCETO VEÍCULOS AUTOMOTORES E MOTOCICLETAS"
     },
     {
         id:9,
         secao:"H",
-        tipoEmpresa:[2],
+        tipoEmpresa: 2,
         nomeRamoEmpresa:"TRANSPORTE TERRESTRE"
     },
     {
         id:10,
         secao:"H",
-        tipoEmpresa:[2],
+        tipoEmpresa: 2,
         nomeRamoEmpresa:"TRANSPORTE AQUAVIÁRIO"
-    },
-    {
-        id: 12,
-        secao: "Q",
-        tipoEmpresa: [2],
-        nomeRamoEmpresa: "ATIVIDADES DE ATENÇÃO À SAÚDE HUMANA"
     },
     {
         id: 11,
         secao: "N",
-        tipoEmpresa: [2],
+        tipoEmpresa: 2,
         nomeRamoEmpresa: "SERVIÇOS DE ESCRITÓRIO, DE APOIO ADMINISTRATIVO E OUTROS SERVIÇOS PRESTADOS PRINCIPALMENTE ÀS EMPRESAS"
+    },
+    {
+        id: 12,
+        secao: "Q",
+        tipoEmpresa: 2,
+        nomeRamoEmpresa: "ATIVIDADES DE ATENÇÃO À SAÚDE HUMANA"
     }
 ])
 
@@ -113,127 +113,127 @@ db.cnae.insertMany([
         id: 1,
         numeroCnae: "0113-0/00",
         descricao: "Cultivo de cana-de-açúcar",
-        ramoEmpresa: [1],
+        ramoEmpresa: 1,
     },
     {
         id: 2,
         numeroCnae: "0131-8/00",
         descricao: "Cultivo de laranja",
-        ramoEmpresa: [1],
+        ramoEmpresa: 1,
     },
     {
         id: 3,
         numeroCnae: "0210-1/01",
         descricao: "Cultivo de eucalipto",
-        ramoEmpresa: [2],
+        ramoEmpresa: 2,
     },
     {
         id: 4,
         numeroCnae: "0220-9/04",
         descricao: "Coleta de látex em florestas nativas",
-        ramoEmpresa: [2],
+        ramoEmpresa: 2,
     },
     {
         id: 5,
         numeroCnae: "0500-3/01",
         descricao: "Extração de carvão mineral",
-        ramoEmpresa: [3],
+        ramoEmpresa: 3,
     },
     {
         id: 6,
         numeroCnae: "0710-3/01",
         descricao: "Extração de minério de ferro",
-        ramoEmpresa: [4],
+        ramoEmpresa: 4,
     },
     {
         id: 7,
         numeroCnae: "0721-9/01",
         descricao: "Extração de minério de alumínio",
-        ramoEmpresa: [4],
+        ramoEmpresa: 4,
     },
     {
         id: 8,
         numeroCnae: "3600-6/01",
         descricao: "Captação, tratamento e distribuição de água",
-        ramoEmpresa: [5],
+        ramoEmpresa: 5,
     },
     {
         id: 9,
         numeroCnae: "3600-6/02",
         descricao: "Distribuição de água por caminhões",
-        ramoEmpresa: [5],
+        ramoEmpresa: 5,
     },
     {
         id: 10,
         numeroCnae: "3811-4/00",
         descricao: "Coleta de resíduos não perigosos",
-        ramoEmpresa: [6],
+        ramoEmpresa: 6,
     },
     {
         id: 11,
         numeroCnae: "3900-5/00",
         descricao: "Descontaminação e outros serviços de gestão de resíduos",
-        ramoEmpresa: [6],
+        ramoEmpresa: 6,
     },
     {
         id: 12,
         numeroCnae: "4511-1/01",
         descricao: "Comércio a varejo de automóveis, camionetas e utilitários novos",
-        ramoEmpresa: [7],
+        ramoEmpresa: 7,
     },
     {
         id: 13,
         numeroCnae: "4512-9/01",
         descricao: "Representantes comerciais e agentes do comércio de veículos automotores",
-        ramoEmpresa: [7],
+        ramoEmpresa: 7,
     },
     {
         id: 14,
         numeroCnae: "4611-7/00",
         descricao: "Representantes comerciais e agentes do comércio de matérias-primas agrícolas e animais vivos",
-        ramoEmpresa: [8],
+        ramoEmpresa: 8,
     },
     {
         id: 15,
         numeroCnae: "4621-4/00",
         descricao: "Comércio atacadista de café em grão",
-        ramoEmpresa: [8],
+        ramoEmpresa: 8,
     },
     {
         id: 16,
         numeroCnae: "4912-4/01",
         descricao: "Transporte ferroviário de passageiros intermunicipal e interestadual",
-        ramoEmpresa: [9],
+        ramoEmpresa: 9,
     },
     {
         id: 17,
         numeroCnae: "4923-0/01",
         descricao: "Serviço de táxi",
-        ramoEmpresa: [9],
+        ramoEmpresa: 9,
     },
     {
         id: 18,
         numeroCnae: "5011-4/02",
         descricao: "Transporte marítimo de cabotagem - Passageiros",
-        ramoEmpresa: [10],
+        ramoEmpresa: 10,
     },
     {
         id: 19,
         numeroCnae: "5011-4/01",
         descricao: "Transporte marítimo de cabotagem - Carga",
-        ramoEmpresa: [10],
+        ramoEmpresa: 10,
     },
     {
         id: 20,
         numeroCnae: "8211-3/00",
         descricao: "Serviços combinados de escritório e apoio administrativo.",
-        ramoEmpresa: [11]
+        ramoEmpresa: 11,
     },
     {
         id: 21,
         numeroCnae: "8630-5/01",
         descricao: "Atividade médica ambulatorial com recursos para realização de procedimentos cirúrgicos",
-        ramoEmpresa: [12]
+        ramoEmpresa: 12,
     }  
 ])
 
@@ -243,7 +243,7 @@ db.usuario.insertMany([
         login: "usuario123",
         senha: "senhaSegura",
         nome: "Maria da Silva",
-        cpf: "98765432100",
+        cpf: "97765432100",
         email: "maria@email.com"
     },
     {
@@ -251,7 +251,7 @@ db.usuario.insertMany([
         login: "joao123",
         senha: "senhaSegura2",
         nome: "joão Almeida",
-        cpf: "98765432101",
+        cpf: "95765432101",
         email: "joao@email.com"
     },
     {
@@ -259,19 +259,19 @@ db.usuario.insertMany([
         login: "gabi123",
         senha: "senhaSegura3",
         nome: "Gabriela Silva",
-        cpf: "98765432103",
+        cpf: "94765432103",
         email: "gabi@email.com"
     },
     {
-        id:2,
+        id:4,
         login: "leticia123",
         senha: "senhaSegura4",
         nome: "Leticia Vasquez",
-        cpf: "98765432105",
+        cpf: "96765432105",
         email: "leticia@email.com"
     },
     {
-        id:2,
+        id:5,
         login: "fernando123",
         senha: "senhaSegura5",
         nome: "Fernando Scheut",
@@ -289,17 +289,22 @@ db.questionario.insertMany([
                     id: 18,
                     numeroCnae: "5011-4/02",
                     descricao: "Transporte marítimo de cabotagem - Passageiros",
-                    ramoEmpresa: [11]
+                    ramoEmpresa: 11
                 },
                 {
                     id: 19,
                     numeroCnae: "5011-4/01",
                     descricao: "Transporte marítimo de cabotagem - Carga",
-                    ramoEmpresa: [11]
+                    ramoEmpresa: 11
                 }
             ],
-        usuario: [1],
-        tributacao: []
+        usuario: 1,
+        tributacao: 3,
+        enderecoEmpresa: "Conselheiro Rodrigues, Santos",
+        location: {
+            type: "Point",
+            coordinates: [-46.301675, -23.965698] // Coordenadas do Porto de Santos
+        }
     },
     {
         id: 2,
@@ -309,11 +314,16 @@ db.questionario.insertMany([
                     id: 5,
                     numeroCnae: "0500-3/01",
                     descricao: "Extração de carvão mineral",
-                    ramoEmpresa: [4]
+                    ramoEmpresa: 4
                 }
             ],
-        usuario: [2],
-        tributacao: []
+        usuario: 2,
+        tributacao: 2,
+        enderecoEmpresa: "Avenida Liberdade, Sorocaba",
+        location: {
+            type: "Point",
+            coordinates: [-47.367350, -23.428858]  //Flextronics, Sorocaba
+        }
     },
     {
         id: 3,
@@ -323,11 +333,16 @@ db.questionario.insertMany([
                     id: 17,
                     numeroCnae: "4923-0/01",
                     descricao: "Serviço de táxi",
-                    ramoEmpresa: [10]
+                    ramoEmpresa: 9
                 }
             ],
-        usuario: [3],
-        tributacao: [1]
+        usuario: 3,
+        tributacao: 1,
+        enderecoEmpresa: "Jerome Case, Sorocaba",
+        location: {
+            type: "Point",
+            coordinates: [-47.391109, -23.432192] //CNHI, Sorocaba
+        }
     },
     {
         id: 4,
@@ -337,17 +352,22 @@ db.questionario.insertMany([
                     id: 12,
                     numeroCnae: "4511-1/01",
                     descricao: "Comércio a varejo de automóveis, camionetas e utilitários novos",
-                    ramoEmpresa: [8]
+                    ramoEmpresa: 7
                 },
                 {
                     id: 13,
                     numeroCnae: "4512-9/01",
                     descricao: "Representantes comerciais e agentes do comércio de veículos automotores",
-                    ramoEmpresa: [8]
+                    ramoEmpresa: 7
                 }
             ],
-        usuario: [4],
-        tributacao: []
+        usuario: 4,
+        tributacao: 4,
+        enderecoEmpresa: "Amirtes Luvison, Votorantim",
+        location: {
+            type: "Point",
+            coordinates: [-47.441088, -23.546378], // Coordenadas da Alpina Votorantim
+        }
     },
     {
         id: 5,
@@ -357,11 +377,16 @@ db.questionario.insertMany([
                     id: 2,
                     numeroCnae: "0131-8/00",
                     descricao: "Cultivo de laranja",
-                    ramoEmpresa: [2]
+                    ramoEmpresa: 2
                 }
             ],
-        usuario: [5],
-        tributacao: [1]
+        usuario: 5,
+        tributacao: 1,
+        enderecoEmpresa: "Itavuvu Havan, Sorocaba",
+        location: {
+            type: "Point",
+            coordinates: [-47.480185, -23.459150] // Itavuvu Havan, Sorocaba
+        }
     }
 ])
 
@@ -395,15 +420,15 @@ db.tributacao.insertMany([
 db.abrirEmpresa.insertMany([
     {
         id: 1,
-        formasAbirEmpresa: "JUCESP",
-        descricao: "",
+        formasAbirEmpresa: "Junta Comercial",
+        descricao: "Junta Comercial: É o órgão responsável pelo registro de empresas que exercem atividades empresariais. Isso inclui empresas comerciais, industriais e prestadoras de serviços que têm como objetivo a geração de lucro por meio da produção ou venda de bens e serviços em larga escala. Exemplos de tipos de empresas que são registradas na Junta Comercial: - Empresa Individual de Responsabilidade Limitada (EIRELI); - Sociedade Empresária Limitada (LTDA); - Sociedade Anônima (S/A); - Microempreendedor Individual (MEI). Essas empresas visam ao lucro e possuem uma atividade econômica organizada, e por isso devem ser registradas nas juntas comerciais estaduais, como a JUCESP em São Paulo.",
         cnae: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     },
     {
         id: 2,
         formasAbirEmpresa: "Cartório",
-        descricao: "",
-        cnae: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+        descricao: "Cartório de Registro de Pessoas Jurídicas: Por outro lado, o cartório é responsável pelo registro de sociedades que não exercem atividades empresariais, como a Sociedade Simples (usada por profissionais liberais, como médicos, advogados, dentistas, etc.) e entidades sem fins lucrativos, como associações e fundações. O foco dessas entidades não é a exploração econômica ou empresarial no sentido amplo, mas sim a prestação de serviços profissionais ou sociais.",
+        cnae: [21]
     }
 ])
 
@@ -428,20 +453,5 @@ db.escolherContabilidade.insertMany([
     }
 ])
 
-use('strayCode')
-db.cnae.find(
-    {descricao: /cultivo/i},
-    {numeroCnae:1, tiposTributacao:1, descricao:1, _id:0})
-
-const dataComeco = new Date("2024-01-01")
-const dataFinal = new Date("2024-06-30")
-use('strayCode')
-db.questionario.find(
-    {dtQuestionario: {$gte: dataComeco, $lte: dataFinal}},
-    {dtQuestionario:1, _id:0, cnae: {id:1, descricao:1}})
-
-use('strayCode')
-db.escolherContabilidade.find()
-    
 use('strayCode')
 db.dropDatabase();
