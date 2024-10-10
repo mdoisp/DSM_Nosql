@@ -1,3 +1,4 @@
+/*
 use('strayCode')
 db.cnae.find(
     {descricao: /^c/i, ramoEmpresa: 2},
@@ -131,3 +132,4 @@ db.questionario.find(
         location: 1
     }
 )
+*/
